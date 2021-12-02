@@ -1,8 +1,13 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 :root {
   /*section color*/
   --primary-fon-color: #fff;
   --section-fon-color: #f5f4fa;
-  --hero-footer-color: #2f303a;
+  --footer-color: #2f303a;
   /*text-color*/
   --primary-text-color: #757575;
   --secondary-text-color: #212121;
@@ -20,10 +25,21 @@ body {
   letter-spacing: 0.03em;
 }
 
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 1px solid #cb0d0d;
+}
+
 /*________list style none_______*/
 
 .list {
   list-style: none;
+
+  padding: 0;
+  margin: 0;
 }
 
 /*________logo__________________*/
@@ -38,12 +54,13 @@ body {
   color: #000000;
   text-decoration: none;
 }
-.footer .logo {
-  color: #ffffff;
-}
 
 span {
   color: var(--accent-color);
+}
+
+.footer .logo {
+  color: #ffffff;
 }
 
 /*__________navigation__________*/
@@ -70,10 +87,19 @@ span {
   color: var(--secondary-text-color);
 }
 
-/*___________main hero________________*/
+/*___________ firs page________________*/
 
 /*_____________hero__________________*/
 
+.hero {
+  background-color: var(--footer-color);
+  text-align: center;
+
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  outline: 1px solid red;
+}
 .hero-title {
   font-weight: 900;
   font-size: 44px;
@@ -83,11 +109,29 @@ span {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
-  color: var(--secondary-text-color);
+  color: var(--section-fon-color);
+
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.hero-button {
+  background-color: var(--accent-color);
+  color: var(--butoon-color);
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  border: 0;
+
+  text-align: center;
 }
 
 /*_____________feature_________________*/
 
+.feature {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .feature .title {
   font-weight: bold;
   font-size: 14px;
@@ -96,14 +140,26 @@ span {
   text-transform: uppercase;
 
   color: var(--secondary-text-color);
+
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .feature .text {
   font-size: 14px;
   line-height: 1.7;
+
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 /*___________whot are you doinng___________*/
+
+.action .item {
+  display: inline-block;
+
+  padding-bottom: 94px;
+}
 
 .action .title {
   font-weight: bold;
@@ -112,9 +168,30 @@ span {
   text-align: center;
 
   color: var(--secondary-text-color);
+
+  margin-top: 0px;
+  margin-bottom: 50px;
 }
 
 /*________________team____________________*/
+
+.team {
+  background: var(--section-fon-color);
+}
+
+.team-title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.7;
+  text-align: center;
+
+  color: var(--secondary-text-color);
+
+  margin-top: 0px;
+  margin-bottom: 50px;
+
+  padding-top: 94px;
+}
 
 .team .title {
   font-weight: 500;
@@ -122,18 +199,37 @@ span {
   line-height: 1.9;
 
   color: var(--secondary-text-color);
+
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .team .text {
   font-size: 16px;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 30px;
+}
+
+.team .item {
+  padding-bottom: 94px;
+
+  display: inline-block;
 }
 
 /*___________**_main portfolio_**_______________*/
 
+.content {
+  padding-top: 94px;
+}
 .radio-button a {
   text-decoration: none;
 }
 
+.description {
+  margin: 20px 24px 0;
+}
 .content .title {
   font-size: 18px;
   line-height: 2;
@@ -141,20 +237,42 @@ span {
   letter-spacing: 0.06em;
 
   color: var(--secondary-text-color);
+
+  margin-top: 0;
+  margin-bottom: 4px;
 }
 
 .content .text {
   font-size: 16px;
   line-height: 1.9;
+
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /*_________________footer___________________*/
 
+.footer {
+  background-color: var(--footer-color);
+}
 .footer a {
   text-decoration: none;
 }
 
-.address:hover,
-.address:focus {
+.footer .logo {
+  display: inline-block;
+  padding-top: 60px;
+  margin-bottom: 20px;
+}
+
+.address {
+  padding-bottom: 60px;
+}
+.address a {
+  color: var(--primary-fon-color);
+}
+
+.address a:hover,
+.address a:focus {
   color: var(--accent-color);
 }
